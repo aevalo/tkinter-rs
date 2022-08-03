@@ -1,6 +1,6 @@
 [hooks]
 # the hook-as-array feature support was added in the unusable, unreleased v0.12.0
-#pre-commit = ["cargo check", "cargo fmt --all -- --check", "cargo clippy --workspace --all-targets --all-features --frozen"]
+#pre-commit = ["cargo check", "cargo fmt --all -- --check", "cargo clippy --all-targets --all-features --frozen -- -D warnings"]
 pre-commit = "cargo check && cargo fmt --all -- --check"
 pre-push = "cargo test"
 

@@ -1,6 +1,12 @@
 # tkinter-rs
+
 ## System dependencies
+
 ### Build dependencies
+
+#### System libraries
+
+bzip2 and snapper libraries are expected to be installed with bzip2 development package.
 #### bindgen
 bindgen leverages libclang to preprocess, parse, and type check C and C++ header files.
 

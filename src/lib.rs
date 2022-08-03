@@ -4,6 +4,8 @@
 
 include!(concat!(env!("OUT_DIR"), "/bindings-bz2.rs"));
 
+mod snappy;
+
 #[cfg(test)]
 mod tests {
   use super::*;
