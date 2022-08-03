@@ -16,8 +16,14 @@ See requirements at https://rust-lang.github.io/rust-bindgen/requirements.html
 
 ### Install required Rust components
 
-```
+```sh
 rustup update
 rustup component add clippy
 rustup component add rustfmt
+```
+
+### Install required Cargo plugins
+
+```sh
+cargo install cargo-cmd
 ```

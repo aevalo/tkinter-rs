@@ -13,3 +13,9 @@ libc = "0.2.126"
 
 [dev-dependencies]
 rusty-hook = "^0.11.2"
+
+[package.metadata.commands]
+fmt-check = "cargo fmt --all -- --check"
+fmt-fix = "cargo fmt --all"
+lint-check = "cargo clippy --all-targets --all-features --frozen -- -D warnings"
+lint-fix = "cargo clippy --all-targets --all-features --frozen --fix -- -D warnings"
