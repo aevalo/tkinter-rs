@@ -5,6 +5,10 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[example]]
+name = "embed_tcl"
+crate-type = ["bin"]
+
 [build-dependencies]
 bindgen = "0.53.1"
 
