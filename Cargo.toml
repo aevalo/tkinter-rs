@@ -9,6 +9,10 @@ edition = "2021"
 name = "embed_tcl"
 crate-type = ["bin"]
 
+[[example]]
+name = "embed_tk"
+crate-type = ["bin"]
+
 [build-dependencies]
 bindgen = "0.53.1"
 

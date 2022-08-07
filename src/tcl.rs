@@ -59,11 +59,12 @@ pub struct Tcl_Obj {
   pub internalRep: Tcl_ObjInternalRep,
 }
 
+pub type Tcl_AppInitProc = Option<extern "C" fn(interp: *mut Tcl_Interp) -> c_int>;
 type Tcl_FreeInternalRepProc = Option<extern "C" fn(objPtr: *mut Tcl_Obj)>;
 type Tcl_DupInternalRepProc = Option<extern "C" fn(srcPtr: *mut Tcl_Obj, dupPtr: *mut Tcl_Obj)>;
 type Tcl_UpdateStringProc = Option<extern "C" fn(objPtr: *mut Tcl_Obj)>;
 type Tcl_SetFromAnyProc =
-  Option<extern "C" fn(interp: *mut Tcl_Interp, objPtr: *mut Tcl_Obj) -> ::std::os::raw::c_int>;
+  Option<extern "C" fn(interp: *mut Tcl_Interp, objPtr: *mut Tcl_Obj) -> c_int>;
 type Tcl_ObjCmdProc = Option<
   extern "C" fn(
     clientData: ClientData,
